@@ -12,85 +12,92 @@
 
 ### Problem 1: Floating point numbers
 ```
-insert your pattern here
+\d+\.\d+
 ```
 ### Problem 2: Years before 1990
 ```
-insert your pattern here
+\d.*\([01].(?!9).{3}
 ```
 ### Problem 3: Hexadecimal colors
 ```
-insert your pattern here
+#\w{6}
 ```
 ### Problem 4: Grayscale colors
 ```
-insert your pattern here
+#(.)\1{2}$|#(..)\2{2}
 ```
 ### Problem 5: Too long lines
 ```
-insert your pattern here
+.{30,}
 ```
 ### Problem 6: Remove repeating words
 ```
-insert your pattern here
+Search pattern: \b(.+)\b\1
+Replace pattern: $1
 ```
 ### Problem 7: Match HTML tags
 ```
-insert your pattern here
+<[^>]*>
 ```
 ### Problem 8: Cut numbers two digits after floating point
 ```
-insert your pattern here
+Search pattern: (\d\.\d{2})\d+       
+Replace pattern: $1 
 ```
 ### Problem 9: Digit commas formatting
 ```
-insert your pattern here
+Search pattern: (\d)(?=(\d{3})+\b) 
+Replace pattern: $1,
 ```
 ### Problem 10: Match lowercase function declarations
 ```
-insert your pattern here
+function [a-z][^)]+\)i
 ```
 ### Problem 11: Change date formats
 ```
-insert your pattern here
+Search pattern: (\d+)-(\d+)-(\d+)
+Replace pattern: $3.$2.$1
 ```
 ### Problem 12: Validate 24h time format
 ```
-insert your pattern here
+\b(([01].)|(2[0-3])):[0-5].\b
 ```
 ### Problem 13: Validate AM/PM time format
 ```
-insert your pattern here
+\b((00)|\d):[0-5]\d\s+(AM|PM)\b
 ```
 ### Problem 14: Pascal style to C-style parameters
 ```
-insert your pattern here
+Search pattern: "; "
+Replace pattern: ", "
 ```
 ### Problem 15: Change variable initialization
 ```
-insert your pattern here
+Search pattern: var\s+([^=]+)\s+=\s+new\s+([^(]+)
+Replace pattern: $2 $1
 ```
 ### Problem 16: IPv6 adresses
 ```
-insert your pattern here
+((?<=\s+)(\w{1,4}:+)+).*\b
 ```
 ### Problem 17: Validate 32 or 24 bit hexadecimal colors
 ```
-insert your pattern here
+((#([a,f]|\d){8})\b)|((#([a,f]|\d){6})\b)
 ```
 ### Problem 18: Replace operators with function calls
 ```
-insert your pattern here
+Search pattern: ([^\s?]+)\s?\+\s?(.*)\b([)]+)?
+Replace pattern: Add($1, $2$3)
 ```
 ### Problem 19: Extract query string from URL
 ```
-insert your pattern here
+\?.*
 ```
 ### Problem 20: Extract host from URL
 ```
-insert your pattern here
+http://[\w.]+
 ```
 ### Problem 21: Strings not containing word
 ```
-insert your pattern here
+^(.(?!.*chocolate).*)+
 ```
